@@ -13,7 +13,7 @@
       <image src='../../images/zhubo2.png' class='bbb'></image>
       <image src='../../images/zhubo3.jpg' class='bbb'></image>
     </scroll-view>
-  <button bindtap='jump' class='btn'>登入</button>
+  <button bindtap='jump' class='btn'>进入</button>
   <view class='btm'>
     <view class='login'>
       <image src="../../images/wx.png"></image>

@@ -35,6 +35,9 @@
   flex-direction: column;
   text-align: center;
 }
+.car image{
+  margin-left: 20rpx;
+}
 button{
   width:40%;
   color: #fff;

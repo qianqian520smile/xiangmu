@@ -1,27 +1,80 @@
 <!--pages/homes/homes.wxml-->
 <view class='wrap'>
-   <view class='list'>
-     <text>热门</text>
-     <text>分类</text>
-     <text>精品</text>
-     <text>直播</text>
-     <text>广播</text>
-   </view>
-  <swiper autoplay="{{true}}">
-  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" width="355" height="150" />
-    </swiper-item>
-  </block>
-</swiper>
-<view class='today'>
-   <image src='../../images/1.png'></image>
-   <text>今日主播榜</text>
-</view>
-<view class='person'>
-   <view class='p-top' wx:for="{{list}}" wx:key="{{index}}">
-     <image src='../../images/girl.png'></image>
-     <view>{{item.name}}</view>
-   </view> 
-</view>
+  <view class='list'>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">热门</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">分类</view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">精品</view>
+      <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">直播</view>
+      <view class="swiper-tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab">广播</view>
+    </view>
+  </view>
+
+
+  <view class="{{currentTab == 0 ? 'show':'hidden'}}">
+    <scroll-view>
+      <swiper autoplay="{{true}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='today'>
+        <image src='../../images/1.png'></image>
+        <text>今日主播榜</text>
+      </view>
+      <view class='person'>
+        <view class='p-top' wx:for="{{list}}" wx:key="{{index}}">
+          <image src='../../images/girl.png'></image>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 1 ? 'show':'hidden'}}">
+    <scroll-view>
+      <view class='shopcar'>
+        <view class='money' wx:for="{{arr}}" wx:key="{{index}}">
+          <image src='{{item.img}}'></image>
+          <text>{{item.name}}</text>
+        </view>
+        <!-- <view class='money'>
+          <image src='../../images/car.png'></image>
+          <text>有声书</text>
+        </view> -->
+      </view>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 2 ? 'show':'hidden'}}">
+    <scroll-view>
+     <view>
+         <view class='shopcar'>
+        <view class='money' wx:for="{{brr}}" wx:key="{{index}}">
+          <image src='{{item.img}}'></image>
+          <text>{{item.name}}</text>
+        </view>
+      </view>
+       <view class='person'>
+        <view class='p-top' wx:for="{{list}}" wx:key="{{index}}">
+          <image src='../../images/girl.png'></image>
+          <view>{{item.name}}</view>
+        </view>
+      </view>
+     </view>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 3 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容4</text>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 4 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容5</text>
+    </scroll-view>
+  </view>
+
+
+
 </view>

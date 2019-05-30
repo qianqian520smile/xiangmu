@@ -4,7 +4,14 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {
+  data: { 
+    brr:[{
+      "name":"我的订阅",
+      "flag":false
+    }, {
+        "name": "推荐订阅",
+        "flag": false
+      }],
     arr: [{
       "img": "../../images/shipin.png",
       "title": "【新春特辑一自我相处】",
@@ -21,14 +28,40 @@ Page({
       "img": "../../images/shipin.png",
       "title": "【新春特辑一自我相处】",
       "name": "蔡康永的201情商课"
-    }]
+    }],
+    num:0,
+    currentTab:0
   },
-
+    join:function(){
+     let {num} = this.data
+       ++num
+     this.setData({
+       num: num
+     })
+   },
+  btn: function (en) {
+    console.log(en.target.dataset.ind)
+    let ind = en.target.dataset.ind
+    this.data.brr[ind].flag = !this.data.brr[ind].flag
+    this.setData({
+      brr: this.data.brr
+    })
+    console.log(this.data.brr)
+  },
+  clickTab: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current,
+      })
+    }
+    },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

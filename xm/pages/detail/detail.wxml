@@ -1,41 +1,76 @@
 <!--pages/detail/detail.wxml-->
 <view class='wrap'>
   <view class='list'>
-     <view class='one'> 
-       <image src='../../images/yy1.png'></image>
-       <text>下载</text>
-       <text>暂无</text>
-     </view>
-       <view class='one'> 
-    <image src='../../images/yy.png'></image>
-       <text>历史</text>
-       <text>26</text>
-     </view>
-       <view class='one'> 
-    <image src='../../images/yy.png'></image>
-       <text>关注</text>
-       <text>1</text>
-     </view>
-       <view class='one'> 
-     <image src='../../images/yy.png'></image>
-       <text>喜欢</text>
-       <text>1</text>
-     </view>
-  </view>
-  <view class='center'>
-     <view>我的订阅</view>
-     <view>推荐订阅</view>
-  </view>
-    <view class='qing'>
-    <view class='two' wx:for="{{arr}}" wx:key="{{index}}">
-      <image src='{{item.img}}'></image>
-      <view>
-        <view>{{item.title}}</view>
-        <view class='size'>
-          <text>{{item.name}}</text>
-          <view class='img'><image src='../../images/guanzhu.png'></image></view>
-        </view>
-      </view>
+    <view class='one'>
+      <image src='../../images/yy1.png'></image>
+      <text>下载</text>
+      <text>暂无</text>
+    </view>
+    <view class='one'>
+      <image src='../../images/yy.png'></image>
+      <text>历史</text>
+      <text>26</text>
+    </view>
+    <view class='one'>
+      <image src='../../images/yy.png'></image>
+      <text>关注</text>
+      <text>{{num}}</text>
+    </view>
+    <view class='one'>
+      <image src='../../images/yy.png'></image>
+      <text>喜欢</text>
+      <text>1</text>
     </view>
   </view>
+  <!-- <view class='center'>
+     <view wx:for="{{brr}}" wx:key="{{index}}" bindtap='btn' data-ind='{{index}}' class='{{item.flag?"active":""}}'>{{item.name}}</view>
+  </view> -->
+
+
+
+  <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">我的订阅</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">推荐订阅</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">喜欢</view>
+  </view>
+
+  <view class="show {{currentTab == 0 ? 'show':'hidden'}}">
+    <scroll-view>
+      <view class='qing'>
+        <view class='two' wx:for="{{arr}}" wx:key="{{index}}">
+          <image src='{{item.img}}'></image>
+          <view>
+            <view>{{item.title}}</view>
+            <view class='size'>
+              <text>{{item.name}}</text>
+              <view class='img' bindtap='join'>
+                <image src='../../images/guanzhu.png'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 1 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容2</text>
+    </scroll-view>
+  </view>
+  <view class="{{currentTab == 2 ? 'show':'hidden'}}">
+    <scroll-view>
+      <text>暂无内容3</text>
+    </scroll-view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
 </view>

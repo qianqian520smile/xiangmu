@@ -6,8 +6,77 @@ Page({
    */
   data: {
     imgUrls: ["https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1558958731&di=f6754e100e2621283366b528226ee72a&src=http://youimg1.c-ctrip.com/target/tg/519/430/096/974b55263fad4c9ab438dba9cbbc158e.jpg", "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558968816187&di=c17cc876ddc78a6f73d99fa9df1cd534&imgtype=0&src=http%3A%2F%2Fpic146.nipic.com%2Ffile%2F20171112%2F25779728_185942485034_2.jpg","https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558968816176&di=e165bca9e4eceb6f98be5b74d650a62f&imgtype=0&src=http%3A%2F%2Fpic27.nipic.com%2F20130320%2F8952533_092547846000_2.jpg"],
-    list:[]
+    list:[],
+    currentTab:0,
+    arr:[{
+      "name":"付费",
+      "img":"../../images/car.png"
+    }, {
+        "name": "有声书",
+        "img": "../../images/list.png"
+      }, {
+        "name": "音乐",
+        "img": "../../images/money.png"
+      }, {
+        "name": "娱乐",
+        "img": "../../images/nao.png"
+      }, {
+        "name": "3D体验馆",
+        "img": "../../images/more.png"
+      }, {
+        "name": "头条",
+        "img": "../../images/money.png"
+      }, {
+        "name": "脱口秀",
+        "img": "../../images/qiezi.png"
+      }, {
+        "name": "人文",
+        "img": "../../images/car.png"
+      }, {
+        "name": "教育",
+        "img": "../../images/more.png"
+      }, {
+        "name": "相声评书",
+        "img": "../../images/list.png"
+      }, {
+        "name": "小语种",
+        "img": "../../images/car.png"
+      }, {
+        "name": "电台",
+        "img": "../../images/nao.png"
+      }, {
+        "name": "养生",
+        "img": "../../images/car.png"
+      }],
+       brr: [{
+        "name": "付费",
+        "img": "../../images/car.png"
+      }, {
+        "name": "有声书",
+        "img": "../../images/list.png"
+      }, {
+        "name": "音乐",
+        "img": "../../images/money.png"
+      }, {
+        "name": "娱乐",
+        "img": "../../images/nao.png"
+      }, {
+        "name": "3D体验馆",
+        "img": "../../images/more.png"
+      }, {
+        "name": "头条",
+        "img": "../../images/money.png"
+      }]
   },
+  clickTab: function (e) {
+    var that = this;
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      that.setData({
+        currentTab: e.target.dataset.current,
+      })
+    }},
 
   /**
    * 生命周期函数--监听页面加载

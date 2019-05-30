@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    num:0
   },
 
   /**
@@ -14,7 +14,13 @@ Page({
   onLoad: function (options) {
 
   },
-
+   join:function(){
+     let {num} = this.data
+     ++num
+     this.setData({
+       num: num
+     })
+   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
