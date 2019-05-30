@@ -1,0 +1,27 @@
+<!--pages/homes/homes.wxml-->
+<view class='wrap'>
+   <view class='list'>
+     <text>热门</text>
+     <text>分类</text>
+     <text>精品</text>
+     <text>直播</text>
+     <text>广播</text>
+   </view>
+  <swiper autoplay="{{true}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class='today'>
+   <image src='../../images/1.png'></image>
+   <text>今日主播榜</text>
+</view>
+<view class='person'>
+   <view class='p-top' wx:for="{{list}}" wx:key="{{index}}">
+     <image src='../../images/girl.png'></image>
+     <view>{{item.name}}</view>
+   </view> 
+</view>
+</view>

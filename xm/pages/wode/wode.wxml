@@ -1,0 +1,71 @@
+<!--pages/wode/wode.wxml-->
+
+<view class='wrap'>
+  <view class='top'>
+    <view class='img'>
+      <image src='../../images/qiezi.png'></image>
+    </view>
+    <view class='right'>
+      <view class='top-l'>
+        <text style='font-size:50rpx'>茄子</text>
+        <image src='../../images/df.png'></image>
+      </view>
+      <view class='top-b'>
+        <image src='../../images/jinpai.png'></image>
+        <text style='font-size:30rpx'>已听143小时15分钟</text>
+      </view>
+    </view>
+  </view>
+  <view class='list'>
+     <view class='one'> 
+       <text>1</text>
+       <text>已购</text>
+     </view>
+       <view class='one'> 
+       <text>0</text>
+       <text>优惠券</text>
+     </view>
+       <view class='one'> 
+       <text>0</text>
+       <text>喜点</text>
+     </view>
+       <view class='one'> 
+       <text>0</text>
+       <text>直播</text>
+     </view>
+       <view class='one'> 
+        <image src='../../images/money.png'></image>
+       <text>我的钱包</text>
+     </view>
+  </view>
+<view class='list lists'>
+     <view class='one'> 
+       <image src='../../images/yy1.png'></image>
+       <text>我要录音</text>
+     </view>
+       <view class='one'> 
+    <image src='../../images/yy.png'></image>
+       <text>我要直播</text>
+     </view>
+       <view class='one'> 
+    <image src='../../images/yy.png'></image>
+       <text>我的作品</text>
+     </view>
+       <view class='one'> 
+        <image src='../../images/money.png'></image>
+       <text>我的钱包</text>
+     </view>
+  </view>
+  <view class='hui'>
+     <image src='../../images/money.png'></image>
+     <text>巅峰会员</text>
+  </view>
+  <view class='hui'>
+     <image src='../../images/money.png'></image>
+     <text>分享游戏</text>
+  </view>
+  <view class='hui'>
+     <image src='../../images/money.png'></image>
+     <text>我的游戏</text>
+  </view>
+</view>

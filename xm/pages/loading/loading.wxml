@@ -1,0 +1,32 @@
+<!--pages/loading/loading.wxml-->
+<view class='wrap'>
+  <view class='list'>
+    <image src='../../images/zhubo.png'></image>
+    <view class='play'>
+      <view>豆蔻直播--真人秀直播</view>
+      <view>主播视频交友</view>
+      <image src='../../images/start.png' id='imag'></image>
+    </view>
+  </view>
+    <scroll-view scroll-x class='aaa'>
+      <image src='../../images/zhubo1.png' class='bbb'></image>
+      <image src='../../images/zhubo2.png' class='bbb'></image>
+      <image src='../../images/zhubo3.jpg' class='bbb'></image>
+    </scroll-view>
+  <button bindtap='jump' class='btn'>登入</button>
+  <view class='btm'>
+    <view class='login'>
+      <image src="../../images/wx.png"></image>
+      <text>微信登入</text>
+    </view>
+    <view class='login'>
+      <image src="../../images/QQ.png"></image>
+      <text>QQ登入</text>
+    </view>
+    <view class='login'>
+      <image src="../../images/wb.png"></image>
+      <text>微信登入</text>
+    </view>
+
+  </view>
+</view>

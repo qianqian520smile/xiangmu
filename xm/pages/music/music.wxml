@@ -1,0 +1,43 @@
+<!--pages/music/music.wxml-->
+<view class='wrap'>
+  <view class='top'>美食演绎火锅王朝</view>
+  <view class='img'>
+    <image src='../../images/person.png'></image>
+    <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop>
+    </audio>
+  </view>
+  <view class='tan'>
+    <image src='../../images/tan.png'></image>
+    <view>
+      <image src='../../images/car.png'></image>
+      <image src='../../images/more.png' id="more" bindtap='jump'></image>
+    </view>
+  </view>
+  <view class='jin'>
+    <!-- <progress percent="20" show-info /> -->
+    <progress percent="40" class='progress' />
+    <!-- <slider bindchanging='bang' min='20' max='100' ></slider> -->
+    <view class='time'>
+      <text> 09:50</text>
+      <text>38:49</text>
+    </view>
+  </view>
+  <view class='pause'>
+    <view class='heng'>
+      <image src='../../images/list.png'></image>
+      <text>播放列表</text>
+    </view>
+    <image src='../../images/left.png'></image>
+    <!-- <image src='../../images/pause.png'></image>  -->
+    <button bindtap="audioPlay" class='play'>播</button>
+    <button bindtap="audioPause" class='play'>停</button>
+    <button bindtap="audioStart" class='play'>back</button>
+    <image src='../../images/right.png'></image>
+    <view class='heng'>
+      <image src='../../images/nao.png'></image>
+      <text>定时关闭</text>
+    </view>
+  </view>
+
+
+</view>

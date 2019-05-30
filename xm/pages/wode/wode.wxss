@@ -1,0 +1,78 @@
+/* pages/wode/wode.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.top {
+  width: 100%;
+  height: 200rpx;
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+.img{
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+}
+.img image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+  margin-top: 30rpx;
+}
+.top-l{
+  display: flex;
+}
+.top-l image{
+   width: 250rpx;
+  height: 50rpx;
+}
+.top-b image{
+  width: 100rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+}
+.list{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+}
+.one{
+  display: flex;
+  flex-direction: column;
+  width:20%;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+.one image{
+  width:80rpx;
+  height: 80rpx;
+}
+.lists{
+  margin-top: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hui{
+  width:100%;
+  height:50rpx;
+  display: flex;
+  margin-top: 80rpx;
+}
+.hui image{
+   width:50rpx;
+  height: 50rpx;
+  margin:0 50rpx;
+}

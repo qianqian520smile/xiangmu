@@ -1,0 +1,23 @@
+<!--pages/xiang/xiang.wxml-->
+
+<view class='wrap'>
+  <view><image src='../../images/shipin.png' class='img'></image></view>
+  <view class='list'>
+     <text>课程详情</text>
+     <text>课程详情</text>
+  </view>
+  <view class='wenzi'>
+   水电费花大精力快递费女的是女今年的可
+   能那就发到你军方的困顿反抗军就是女空
+   间发到你发V快乐呢是f个电话大家都觉得
+  
+  </view>
+  <view class='btn'>
+      <view class='car'>
+        <image src='../../images/yy.png'></image>
+          购物车
+      </view>
+      <button style='background:blue'>加入购物车</button>
+      <button style='background:orange'>立即购买</button>
+  </view>
+</view>

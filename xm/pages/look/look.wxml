@@ -1,0 +1,29 @@
+<!--pages/look/look.wxml-->
+<view class='wrap'>
+  <view class='list'>
+    <view class='one' wx:for="{{list}}" wx:key="{{index}}">
+      <image src='{{item.img}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class='xiang'>
+    <view class='active'>推荐</view>
+    <view>热点</view>
+    <view>情感</view>
+    <view>财经</view>
+    <view>段子</view>
+    <view>历史</view>
+  </view>
+  <view class='qing'>
+    <view class='two' wx:for="{{arr}}" wx:key="{{index}}">
+      <image src='{{item.img}}'></image>
+      <view>
+        <view>{{item.title}}</view>
+        <view class='size'>
+          <text>{{item.name}}</text>
+          <view class='img' bindtap='jump'><image src='../../images/more.png'></image></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

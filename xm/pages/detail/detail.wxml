@@ -1,0 +1,41 @@
+<!--pages/detail/detail.wxml-->
+<view class='wrap'>
+  <view class='list'>
+     <view class='one'> 
+       <image src='../../images/yy1.png'></image>
+       <text>下载</text>
+       <text>暂无</text>
+     </view>
+       <view class='one'> 
+    <image src='../../images/yy.png'></image>
+       <text>历史</text>
+       <text>26</text>
+     </view>
+       <view class='one'> 
+    <image src='../../images/yy.png'></image>
+       <text>关注</text>
+       <text>1</text>
+     </view>
+       <view class='one'> 
+     <image src='../../images/yy.png'></image>
+       <text>喜欢</text>
+       <text>1</text>
+     </view>
+  </view>
+  <view class='center'>
+     <view>我的订阅</view>
+     <view>推荐订阅</view>
+  </view>
+    <view class='qing'>
+    <view class='two' wx:for="{{arr}}" wx:key="{{index}}">
+      <image src='{{item.img}}'></image>
+      <view>
+        <view>{{item.title}}</view>
+        <view class='size'>
+          <text>{{item.name}}</text>
+          <view class='img'><image src='../../images/guanzhu.png'></image></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
